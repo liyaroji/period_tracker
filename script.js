@@ -1,7 +1,7 @@
 document.getElementById('tracker-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Get input values
+    
     const cycleLength = parseInt(document.getElementById('cycle-length').value);
     const lastPeriodDate = new Date(document.getElementById('last-period-date').value);
 
@@ -10,7 +10,7 @@ document.getElementById('tracker-form').addEventListener('submit', function(e) {
         return;
     }
 
-    // Calculate the next period date
+   
     let nextPeriodDate = new Date(lastPeriodDate);
     nextPeriodDate.setDate(lastPeriodDate.getDate() + cycleLength);
 
