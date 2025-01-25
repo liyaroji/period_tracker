@@ -3,13 +3,13 @@ body {
     background-image: url("https://www.westdesmoinesobgyn.com/wp-content/uploads/2022/07/Screen-Shot-2022-07-18-at-3.10.08-PM.png"); 
     background-size: cover; 
     background-position: center center; 
-    background-attachment: fixed; /* Make the background stay fixed when scrolling */
+    background-attachment: fixed; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: white; /* Make text white for contrast, can adjust based on image */
+    color: white; 
 }
 
 .container {
