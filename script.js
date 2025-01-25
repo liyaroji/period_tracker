@@ -14,9 +14,9 @@ document.getElementById('tracker-form').addEventListener('submit', function(e) {
     let nextPeriodDate = new Date(lastPeriodDate);
     nextPeriodDate.setDate(lastPeriodDate.getDate() + cycleLength);
 
-    // Format the next period date to display
+  
     const nextPeriodFormatted = nextPeriodDate.toLocaleDateString();
 
-    // Display next period date
+   
     document.getElementById('next-period').textContent = `Your next period will start on: ${nextPeriodFormatted}`;
 });
