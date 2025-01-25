@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Test Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+        input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+        .result h3 {
+            color: #333;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pregnancy Test Calculator</h1>
+        
+        <label for="lmp">Enter your Last Menstrual Period (LMP):</label>
+        <input type="date" id="lmp" required>
+
+        <label for="cycleLength">Enter your Average Cycle Length (days):</label>
+        <input type="number" id="cycleLength" min="21" max="35" required>
+
+        <button onclick="calculatePregnancyTest()">Check Ovulation & Pregnancy Test Window</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculatePregnancyTest() {
+            const lmp = document.getElementById('lmp').value;
+            const cycleLength = document.getElementById('cycleLength').value;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous results
+
+            if (!lmp || !cycleLength) {
+                resultDiv.innerHTML = '<p class="error">Please fill out all fields.</p>';
+                return;
+            }
+
+            const lmpDate = new Date(lmp);
+            const ovulationDate = new Date(lmpDate);
+            ovulationDate.setDate(lmpDate.getDate() + (cycleLength - 14)); // Ovulation typically occurs 14 days before next period
+
+            const pregnancyTestWindowStart = new Date(ovulationDate);
+            pregnancyTestWindowStart.setDate(ovulationDate.getDate() + 7); // 7 days after ovulation to test
+
+            const pregnancyTestWindowEnd = new Date(pregnancyTestWindowStart);
+            pregnancyTestWindowEnd.setDate(pregnancyTestWindowStart.getDate() + 3); // You can test for 3 days after the start window
+
+            resultDiv.innerHTML = `
+                <h3>Estimated Ovulation Date:</h3>
+                <p>${ovulationDate.toDateString()}</p>
+
+                <h3>Recommended Pregnancy Test Window:</h3>
+                <p>Start: ${pregnancyTestWindowStart.toDateString()}</p>
+                <p>End: ${pregnancyTestWindowEnd.toDateString()}</p>
+
+                <h3>Note:</h3>
+                <p>This is an estimate. For accurate results, it's recommended to consult with a healthcare provider.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
