@@ -17,7 +17,7 @@ document.getElementById("cycleForm").addEventListener("submit", function(event) 
     const ovulationDate = new Date(lastPeriod);
     ovulationDate.setDate(lastPeriod.getDate() + cycleLength - 14);
 
-    // Display result
+    
     const ovulationDay = ovulationDate.toDateString();
     document.getElementById("ovulationDay").textContent = ovulationDay;
     document.getElementById("result").classList.remove("hidden");
