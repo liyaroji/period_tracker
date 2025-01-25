@@ -93,10 +93,10 @@
 
             const lmpDate = new Date(lmp);
             const ovulationDate = new Date(lmpDate);
-            ovulationDate.setDate(lmpDate.getDate() + (cycleLength - 14)); // Ovulation typically occurs 14 days before next period
+            ovulationDate.setDate(lmpDate.getDate() + (cycleLength - 14)); 
 
             const pregnancyTestWindowStart = new Date(ovulationDate);
-            pregnancyTestWindowStart.setDate(ovulationDate.getDate() + 7); // 7 days after ovulation to test
+            pregnancyTestWindowStart.setDate(ovulationDate.getDate() + 7); 
 
             const pregnancyTestWindowEnd = new Date(pregnancyTestWindowStart);
             pregnancyTestWindowEnd.setDate(pregnancyTestWindowStart.getDate() + 3); 
