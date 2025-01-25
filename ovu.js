@@ -1,7 +1,7 @@
 document.getElementById("cycleForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // Get user inputs
+    
     const lastPeriodDate = document.getElementById("lastPeriod").value;
     const cycleLength = parseInt(document.getElementById("cycleLength").value, 10);
 
