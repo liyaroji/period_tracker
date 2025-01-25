@@ -43,7 +43,7 @@ input {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: 	#FF7F50;
     color: white;
     padding: 10px;
     border: none;
@@ -52,7 +52,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: 	#f46430 ;
 }
 
 #result {
