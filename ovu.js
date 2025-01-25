@@ -13,7 +13,7 @@ document.getElementById("cycleForm").addEventListener("submit", function(event) 
     
     const lastPeriod = new Date(lastPeriodDate);
 
-    // Calculate ovulation date (typically 14 days before the next period)
+    
     const ovulationDate = new Date(lastPeriod);
     ovulationDate.setDate(lastPeriod.getDate() + cycleLength - 14);
 
