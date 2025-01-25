@@ -1,0 +1,80 @@
+
+.bg{
+    background-color: white;
+    height: 100vh;
+    padding: 5px;
+    margin: 10px;
+    background-size: cover;
+}
+.car {
+    height: 50px;
+    width: 280px;
+    border-radius: 6px;
+}
+.top{
+    height: 38px;
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+}
+.car{
+    height: 50px;
+    width: 280px;
+    border-radius: 6px;
+}
+.h1{
+     font-size: 25px;
+    font-weight: bold;
+    color: #800080;
+    font-family: Papyrus;
+}
+.h{
+     font-size: 15px;
+    font-weight: bold;
+    color: black;
+    font-family: Roboto;
+}
+.btn {
+    height: 30px;
+    width: 108px;
+    color: white;
+    font-size: 8px;
+    border-width: 0px;
+    border-radius: 8px;
+}
+.mc {
+    height: 305px;
+    width: 552px;
+    background-color: #3ebd93;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+}
+.ot {
+    height: 305px;
+    width: 552px;
+    background-color: #3ebd93;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+}
+.pt {
+    height: 305px;
+    width: 552px;
+    background-color: #3ebd93;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+}
+.img {
+    margin: 3px;
+    height: 95px;
+    width: 95px;
+}
+
+.para {
+    color: white;
+    margin: 4px;
+    font-family: Roboto;
+    font-size: 44px;
+}
