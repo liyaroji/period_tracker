@@ -1,6 +1,6 @@
 
-# [Project Name] 🎯
-SYNC -Menstrual Tracker
+# SYNC -Menstrual Tracker 🎯
+
 
 ## Basic Details
 ### Team Name: Pals
