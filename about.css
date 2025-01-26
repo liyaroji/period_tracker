@@ -1,7 +1,11 @@
 
 body {
     font-family: 'Arial', serif;
-    background-color: #fff6ce;
+    /*background-color: #fff6ce;*/
+    background-image: url("https://th.bing.com/th/id/OIP.Odnm5lrS1uFfSI7t_f_0HAHaEK?w=285&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"); 
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
     margin: 10px;
     padding: 0;
     display: flex;
@@ -13,7 +17,11 @@ body {
 
   .column-2 {
     max-width: 600px;
-    background-color: #fff0ae;
+    /*background-color: #fff0ae;*/
+    background-image: url("https://th.bing.com/th/id/OIP.vYCZRss6vDeuhm67OV2sxQHaHa?w=166&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"); 
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
